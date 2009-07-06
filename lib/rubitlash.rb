@@ -22,6 +22,7 @@ require 'expect'
 
 class Bitlash
   PROMPT = ">\s"
+  COMMANDS = %w[boot help if ls peep print ps rm run stop while]
   attr_accessor :port_addr
   attr_reader :port, :baud
   def initialize(port_addr, baud=57600, verbose=false, name="Bitflash##{(rand*1000).to_i}")
@@ -43,9 +44,8 @@ class Bitlash
   
   def talk(string)
     @port.puts string
-    reply = @port.expect(/#{PROMPT}/)[0]
-    reply =~ /(.*)\n\r(.*)\n\r/
-    return $2
+    reply = @port.expect(/#{PROMPT}/)[0].split("\n\r")[1...-1]
+    return reply.size == 1 ? reply[0] : reply
   end
   
   def [](var)
@@ -60,8 +60,15 @@ class Bitlash
     self.talk "#{name}:=\"#{cmd}\""
   end
   
+  # def run(macro); self.talk macro.to_s; end
+  # def background(macro); self.talk "run #{macro}"; end
+  
   def method_missing(m, *args)
-    cmd = args.size > 0 ? "print #{m.to_s}(#{args * ','})" : "print #{m.to_s}"
+    if COMMANDS.include? m.to_s
+      cmd = args.size > 0 ? "#{m.to_s} #{args * ','}" : "#{m.to_s}"
+    else
+      cmd = args.size > 0 ? "print #{m.to_s}(#{args * ','})" : "print #{m.to_s}"
+    end
     self.talk(cmd)
   end
   
