@@ -25,6 +25,7 @@ class Bitlash
   COMMANDS = %w[boot help if ls peep print ps rm run stop while]
   attr_accessor :port_addr
   attr_reader :port, :baud
+  
   def initialize(port_addr, baud=57600, verbose=false, name="Bitflash##{(rand*1000).to_i}")
     @port_addr, @baud, @name = port_addr, baud, name
     self.verbose = verbose

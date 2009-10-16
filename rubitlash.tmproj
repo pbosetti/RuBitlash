@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>example/simple.rb</string>
+	<string>lib/rubitlash.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,44 +21,74 @@
 	<integer>214</integer>
 	<key>metaData</key>
 	<dict>
+		<key>README.markdown</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>4</integer>
+				<key>line</key>
+				<integer>21</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>example/simple.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>8</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>16</integer>
+				<integer>19</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>lib/rubitlash.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>69</integer>
+				<key>line</key>
+				<integer>35</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>15</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>12</integer>
 				<key>line</key>
-				<integer>5</integer>
+				<integer>35</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>8</integer>
+				<integer>69</integer>
 				<key>line</key>
-				<integer>16</integer>
+				<integer>35</integer>
 			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
+		<string>lib/rubitlash.rb</string>
 		<string>example/simple.rb</string>
+		<string>README.markdown</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{628, 101}, {666, 927}}</string>
+	<string>{{309, 101}, {666, 927}}</string>
 </dict>
 </plist>

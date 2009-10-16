@@ -4,13 +4,22 @@ RuBitlash is a Ruby interface with the wonderful Bitlash library for Arduino.
 [Bitlash](http://bitlash.net/) is an [Arduino](http://arduino.cc) library that allows direct interaction via serial port with the microcontroller.
 Thanks to Bill Roy for writing it!
 
-INSTALLATION
+Installation
 ============
-First of all you have to [buy or own an Arduino](http://arduino.cc), then install on it Bitlash (v0.95a or later) following the instructions on [Bill Roy's site](http://bitlash.net/).
+RuBitlash gem has moved to [Gemcutter](http://gemcutter.org). In order to install you have two **alternative** choices:
 
-Then install RuBitlash gem and start playing with it:
+1. Simply add the Gemcutter repo to your rubygem source list:
 
-    > sudo gem install pbosetti-rubitlash --source=http://gems.github.com
+        gem sources -a http://gemcutter.org
+
+2. Install gemcutter:
+
+        sudo gem install gemcutter
+        sudo gem tumble
+    
+Next, simply install the gem:
+
+    sudo gem install rubitlash
     
 USAGE
 =====
