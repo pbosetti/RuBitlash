@@ -64,11 +64,12 @@ class Bitlash
   # def run(macro); self.talk macro.to_s; end
   # def background(macro); self.talk "run #{macro}"; end
   
-  def method_missing(m, *args)
-    if COMMANDS.include? m.to_s
-      cmd = args.size > 0 ? "#{m.to_s} #{args * ','}" : "#{m.to_s}"
+  def method_missing(method, *args)
+    method = method.to_s
+    if COMMANDS.include? method
+      cmd = args.size > 0 ? "#{method} #{args * ','}" : "#{method}"
     else
-      cmd = args.size > 0 ? "print #{m.to_s}(#{args * ','})" : "print #{m.to_s}"
+      cmd = args.size > 0 ? "print #{method}(#{args * ','})" : "print #{method}"
     end
     self.talk(cmd)
   end
